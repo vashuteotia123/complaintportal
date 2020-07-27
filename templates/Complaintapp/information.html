@@ -1,0 +1,16 @@
+{%extends 'Complaintapp/base.html'%} {%block body_block%} {%load staticfiles%} {% load bootstrap3 %}
+<form class="jumbotron" method="post">
+    <fieldset>
+        <h2 class="fs-title">Fill your Complaints!</h2>
+        {% csrf_token %} {%bootstrap_form form%}
+        <input type="submit" class="btn btn-primary action-button btn-lg" value="Submit" />
+    </fieldset>
+</form>
+{% if messages%}
+<ul class="messages">
+    {% for message in messages %}
+    <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{%endblock%}

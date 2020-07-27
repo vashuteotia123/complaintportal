@@ -1,0 +1,15 @@
+{%extends 'Complaintapp/base.html'%} {%block body_block%} {%load staticfiles%}
+<link rel="stylesheet" href="{%static 'css/warden.css'%}">
+<div class="flex-container">
+    {%for i in img%}
+    <div>
+        <img src="{{i.image.url}}" width="400">
+        <p>Name:{{i.warden_name}}</p>
+        <p>Designation:{{i.designation}}</p>
+        <p>Email:{{i.email}}</p>
+        <p>Contact No.:{{i.contact}}</p>
+        <p>Block:{{i.block}}</p>
+    </div>
+    {%endfor%}
+</div>
+{%endblock%}

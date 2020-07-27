@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Complaints</title>
+</head>
+<nav class="navbar navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">
+      <img src="https://cdn3.vectorstock.com/i/1000x1000/07/12/hostel-icon-colored-symbol-premium-quality-vector-23790712.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Hostel Complaints
+  </a>
+</nav>
+<body>
+<br>
+<br>
+<br>
+<center>
+
+    <div  class="container">
+<form name="form" method="post" action="">
+    <br><br>
+  <a class="btn btn-dark" href="{%url 'Complaintapp:homepage'%}">Home</a>
+  <a class="btn btn-dark" href="{%url 'Complaintapp:warden'%}">Warden Details</a>
+  <a class="btn btn-dark" href="{%url 'Complaintapp:details'%}">Complaint Details</a>
+</form>
+<br><br>
+{%block body_block%}{% endblock %}
+        <br>
+</center>
+</body>
+<footer class="page-footer font-small special-color-dark pt-4">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+  <div class="footer-copyright text-center py-0">©Developed By Vishal
+  </div>
+
+</footer>
+</html>
